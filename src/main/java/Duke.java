@@ -19,7 +19,9 @@ public class Duke {
             line = in.nextLine();
 
             if (line.equals("bye")){
-                System.out.println("Bye. Hope to see you again soon!");
+                System.out.println("____________________________________________________________\n"
+                        +"Bye. Hope to see you again soon!\n"
+                +"____________________________________________________________\n");
                 break;
             }else if(line.equals("list")){
                 for(j=0;j<i;j++){
@@ -32,19 +34,25 @@ public class Duke {
                 int num = Integer.parseInt(line.substring(5));
                 System.out.println(num);
                 list[num-1].isDone = true;
-                System.out.println("Nice! I've marked this task as done:");
-                System.out.println("[✓] "+ list[num-1].description);
+                System.out.println("____________________________________________________________\n"+
+                        "Nice! I've marked this task as done:");
+                System.out.println("[✓] "+ list[num-1].description + "\n____________________________________________________________\n");
             } else {
                 list[i] = new Task(line);
+                System.out.println("____________________________________________________________");
                 System.out.println("added: "+ line);
+                System.out.println("____-________________________________________________________");
                 i++;
             }
         }
     }
 
     public static void greeting(){
+        System.out.println("____________________________________________________________");
         System.out.println("Hello! I'm Duke");
         System.out.println("What can I do for you?");
+        System.out.println("____________________________________________________________");
     }
 
 }
+
