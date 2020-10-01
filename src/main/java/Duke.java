@@ -6,6 +6,7 @@ import java.io.IOException;  // Import the IOException class to handle errors
 
 import java.util.Scanner;
 
+//main class
 public class Duke {
     public static String PATH = "C:\\Users\\HELIOS\\Downloads\\STUDY MATERIALS\\AY2021_SEM1\\CS2113\\Individualproject\\ip\\data\\duke.txt";
     private static Storage storage = new Storage();

@@ -9,6 +9,7 @@ public class TaskList {
     public static List<Task> list;
     public static int task_count;
 
+    //tasks init
     public TaskList() {
         list = new ArrayList();
         task_count = 0;
@@ -19,6 +20,7 @@ public class TaskList {
         task_count = list.size();
     }
 
+    //2 printlist methods
     public void printList(int i) {
         for(int j = 0; j < i; ++j) {
             String timing = "";
@@ -78,6 +80,7 @@ public class TaskList {
         System.out.println("[✓] " + ((Task)list.get(num - 1)).description + "\n____________________________________________________________\n");
     }
 
+    //add task methods
     public static void addTodo(String[] desc, int i) {
         list.add(i, new Todo(desc[0]));
         System.out.println("____________________________________________________________\nGot it. I've added this task: ");

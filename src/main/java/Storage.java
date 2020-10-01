@@ -13,7 +13,7 @@ import java.util.Scanner;
 public class Storage {
     public Storage() {
     }
-
+    //write to file
     public void writetofile(List<Task> list, int i) {
         try {
             File myObj = new File("C:\\Users\\HELIOS\\Downloads\\STUDY MATERIALS\\AY2021_SEM1\\CS2113\\Individualproject\\ip\\data\\duke.txt");
@@ -72,7 +72,7 @@ public class Storage {
 
         return dataFile;
     }
-
+    //read file
     public List<Task> readFile() {
         ArrayList taskList = new ArrayList();
 
