@@ -13,6 +13,8 @@ public class Task {
     public int length() {
         return listCount; //return tick or X symbols
     }
-
+    public void markAsDone(){
+        this.isDone = true;
+    }
 
 }
