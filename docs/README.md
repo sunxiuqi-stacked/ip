@@ -56,23 +56,7 @@ Expected outcome:
 
 `____________________________________________________________
 Got it. I've added this task: `
-`[T][✗] return book (by: Monday)`
-`Now you have 2 tasks in the list.`
-`____________________________________________________________`
-
-### `deadline <task description> /by <date>` - Add a Deadline
-
-Add a Deadline task to your task list.
-
-Example of usage:
-
-`deadline return book /by Monday`
-
-Expected outcome:
-
-`____________________________________________________________
-Got it. I've added this task: `
-`[T][✗] return book (by: Monday)`
+`[D][✗] return book (by: Monday)`
 `Now you have 2 tasks in the list.`
 `____________________________________________________________`
 
