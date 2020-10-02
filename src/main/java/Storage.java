@@ -19,7 +19,7 @@ public class Storage {
      */
     public void writetofile(List<Task> list, int i) {
         try {
-            File myObj = new File("C:\\Users\\HELIOS\\Downloads\\STUDY MATERIALS\\AY2021_SEM1\\CS2113\\Individualproject\\ip\\data\\duke.txt");
+            File myObj = new File("..\\..\\..\\..\\ip\\data\\duke.txt");
             if (myObj.createNewFile()) {
                 System.out.println("File created!");
             } else {
@@ -31,7 +31,7 @@ public class Storage {
         }
 
         try {
-            FileWriter myWriter = new FileWriter("C:\\Users\\HELIOS\\Downloads\\STUDY MATERIALS\\AY2021_SEM1\\CS2113\\Individualproject\\ip\\data\\duke.txt");
+            FileWriter myWriter = new FileWriter("..\\..\\..\\..\\ip\\data\\duke.txt");
 
             for(int j = 0; j < i; ++j) {
                 String timing = "";
@@ -83,7 +83,7 @@ public class Storage {
         ArrayList taskList = new ArrayList();
 
         try {
-            File dataFile = this.checkFileExists("C:\\Users\\HELIOS\\Downloads\\STUDY MATERIALS\\AY2021_SEM1\\CS2113\\Individualproject\\ip\\data\\duke.txt");
+            File dataFile = this.checkFileExists("..\\..\\..\\..\\ip\\data\\duke.txt");
             Scanner in = new Scanner(dataFile);
 
             while(in.hasNext()) {
