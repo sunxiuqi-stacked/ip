@@ -6,22 +6,38 @@
 public class Ui {
     public Ui() {
     }
-
+    /**
+     * bye msg
+     * ...
+     */
     public void bye() {
         System.out.println("____________________________________________________________\nBye. Hope to see you again soon!\n____________________________________________________________\n");
     }
 
+    /**
+     * error message
+     * ...
+     */
     public void oops(String desc) {
         System.out.println("____________________________________________________________\n☹ OOPS!!! The description of a " + desc + " cannot be empty.");
         System.out.println("____________________________________________________________\n");
     }
 
+    /**
+     * error message 2
+     * ...
+     */
     public void dunno() {
         System.out.println("____________________________________________________________");
         System.out.println(" ☹ OOPS!!! I'm sorry, but I don't know what that means :-( ");
         System.out.println("_____________________________________________________________");
     }
 
+    /**
+     * greeting message
+     *
+     * ...
+     */
     public static void greeting() {
         System.out.println("____________________________________________________________");
         System.out.println("Hello! I'm Duke");

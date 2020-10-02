@@ -20,7 +20,10 @@ public class TaskList {
         task_count = list.size();
     }
 
-    //2 printlist methods
+    /**
+     * print list values based on integer i
+     * ...
+     */
     public void printList(int i) {
         for(int j = 0; j < i; ++j) {
             String timing = "";
@@ -46,6 +49,10 @@ public class TaskList {
 
     }
 
+    /**
+     * print list values based on list
+     * ...
+     */
     public static void printList(List<Task> list) {
         for(int j=0;j<list.size();j++){
             String classtype;
@@ -74,13 +81,20 @@ public class TaskList {
 
     }
 
+    /**
+     * mark as done
+     * ...
+     */
     public void markDone(int num) {
         ((Task)list.get(num - 1)).isDone = true;
         System.out.println("____________________________________________________________\nNice! I've marked this task as done:");
         System.out.println("[✓] " + ((Task)list.get(num - 1)).description + "\n____________________________________________________________\n");
     }
 
-    //add task methods
+    /**
+     * add task types to list
+     * ...
+     */
     public static void addTodo(String[] desc, int i) {
         list.add(i, new Todo(desc[0]));
         System.out.println("____________________________________________________________\nGot it. I've added this task: ");
@@ -115,6 +129,10 @@ public class TaskList {
         System.out.println("_____________________________________________________________");
     }
 
+    /**
+     * delete task
+     * ...
+     */
     public void delete(int i) {
         String timing = "";
         String classtype;
@@ -146,6 +164,10 @@ public class TaskList {
         return list;
     }
 
+    /**
+     * find matching tasks in list
+     *
+     */
     public static void Find(String description) {
         List<Task> returnList = new ArrayList();
         System.out.println(" Here are the matching tasks in your list: ");
