@@ -96,9 +96,9 @@ public class TaskList {
      * ...
      */
     public static void addTodo(String[] desc, int i) {
-        list.add(i, new Todo(desc[0]));
+        list.add(i, new Todo(desc[1]));
         System.out.println("____________________________________________________________\nGot it. I've added this task: ");
-        ++task_count;
+        task_count++;
         System.out.println("[T][✗] " + ((Task)list.get(i)).description);
         System.out.println("Now you have " + task_count + " tasks in the list.");
         System.out.println("____________________________________________________________\n");
@@ -107,7 +107,7 @@ public class TaskList {
     public static void addDeadline(String[] desc, int i) {
         list.add(i, new Deadline(desc[0], desc[1]));
         System.out.println("____________________________________________________________\nGot it. I've added this task: ");
-        ++task_count;
+        task_count++;
         System.out.println("[D][✗] " + ((Task)list.get(i)).description + "(by:" + desc[1] + ")");
         System.out.println("Now you have " + task_count + " tasks in the list.");
         System.out.println("____________________________________________________________\n");
@@ -116,7 +116,7 @@ public class TaskList {
     public static void addEvent(String[] desc, int i) {
         list.add(i, new Event(desc[0], desc[1]));
         System.out.println("____________________________________________________________\nGot it. I've added this task: ");
-        ++task_count;
+        task_count++;
         System.out.println("[E][✗] " + ((Task)list.get(i)).description + "(at:" + desc[1] + ")");
         System.out.println("Now you have " + task_count + " tasks in the list.");
         System.out.println("____________________________________________________________\n");
@@ -156,6 +156,7 @@ public class TaskList {
         }
 
         --task_count;
+        list.remove(list.get(i));
         System.out.println("Now you have " + task_count + " tasks in the list.");
         System.out.println("____________________________________________________________\n");
     }

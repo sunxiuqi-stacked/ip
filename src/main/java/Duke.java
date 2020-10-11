@@ -19,14 +19,13 @@ public class Duke {
 
     public static void main(String[] args) {
         Ui.greeting();
-        tasks = new TaskList(storage.readFile());
-        TaskList.task_count = 0;
+        tasks = storage.readFile(PATH);
         request();
     }
 
     public static void request() {
         Scanner in = new Scanner(System.in);
-        int i = 0;
+        int i = tasks.task_count;
 
         while(true) {
             String status = "[✗] ";
@@ -37,8 +36,12 @@ public class Duke {
             }
 
             if (line.equals("list")) {
-                System.out.println(" ____________________________________________________________\nHere are the tasks in your list: ");
-                tasks.printList(i);
+                System.out.println("____________________________________________________________\nHere are the tasks in your list: ");
+                if(tasks.returnList().isEmpty()) {
+                    System.out.println("There is currently nothing to do!");
+                }else{
+                    tasks.printList(i);
+                }
             } else if (line.contains("done")) {
                 int num = Integer.parseInt(line.substring(5));
                 System.out.println(num);
@@ -82,7 +85,7 @@ public class Duke {
                         ui.oops("task");
                     }
                 } else if (parser.Contains(line, "save")) {
-                    storage.writetofile(tasks.returnList(), i);
+                    storage.writetofile(tasks.returnList(), i, PATH);
                 } else if (parser.Contains(line, "find")) {
                     try {
                         desc = line.split(" ");

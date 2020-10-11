@@ -1,1 +1,1 @@
-1. [E][✗] event AS (at:  16)
+1. [D] [X] deadline ass  (by:  0202)
